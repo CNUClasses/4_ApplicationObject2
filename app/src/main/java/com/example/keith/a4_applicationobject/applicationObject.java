@@ -14,24 +14,17 @@ public class applicationObject extends Application{
     private  Integer myInteger;
 
     public  Integer getMyInteger() {
-        if (myInteger == null)
-            myInteger = new Integer(UNINITIALIZED);
-
+        //Its marginally safer to use getters and setters than a public member
+        //because you can log access
         Log.d(TAG,"APPLICATION getMyInteger, myInteger="+ Integer.toString(myInteger));
 
         return myInteger;
     }
 
     public  void setMyInteger(Integer myInt) {
-        if (myInteger == null)
-            myInteger = new Integer(myInt);
-        else
-            myInteger = myInt;
+        myInteger = myInt;
 
         Log.d(TAG,"APPLICATION setMyInteger, myInteger="+ Integer.toString(myInteger));
-
-        //the above is the same as
-        //myInteger = (myInteger == null) ?new Integer(myInt): myInt;
     }
 
     /**
@@ -47,6 +40,8 @@ public class applicationObject extends Application{
     public void onCreate() {
         super.onCreate();
          Log.e(TAG,"APPLICATION onCreate, myInteger=");
+
+        myInteger = new Integer(UNINITIALIZED);
     }
 
     /**
