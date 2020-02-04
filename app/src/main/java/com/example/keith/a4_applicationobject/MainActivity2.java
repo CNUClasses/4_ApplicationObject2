@@ -1,14 +1,15 @@
 package com.example.keith.a4_applicationobject;
 
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
+import androidx.appcompat.app.AppCompatActivity;
+//import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
 
-public class MainActivity2 extends ActionBarActivity {
+public class MainActivity2 extends AppCompatActivity {
     private static final String TAG = "Mainactivity2";
     TextView myView;
     applicationObject myObject;
