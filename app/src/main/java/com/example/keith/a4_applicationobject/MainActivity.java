@@ -8,6 +8,18 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
+/**
+ * Application persists (mostly) for life of the app
+ * dont store mutable data here though (IOW do not do what this example does)
+ * see https://github.com/codepath/android_guides/wiki/Understanding-the-Android-Application-Class
+ *
+ * Recipe
+ * -create applicationObject extends Application
+ * -in manifest add android:name=".applicationObject" under application (this creates instance of
+ *  applicationObject
+ * -in activities get a reference to the created applicationObjject via '(applicationObject)getApplication()'
+ * -access methods
+ */
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "Mainactivity";
